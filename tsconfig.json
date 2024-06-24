@@ -1,0 +1,25 @@
+{
+  "compilerOptions": {
+    "module": "commonjs",
+    "importHelpers": true,
+    "downlevelIteration": true,
+    "noImplicitAny": true,
+    "removeComments": true,
+    "preserveConstEnums": true,
+    "sourceMap": true,
+    "resolveJsonModule": true,
+    "esModuleInterop": true,
+    "jsx": "react-jsx",
+    "lib": ["es6", "dom"],
+    "noImplicitThis": true,
+    "strictNullChecks": true,
+    "baseUrl": ".",
+    "paths": {
+      "@web/*": ["./web/*"],
+      "~/*": ["./web/js/*"],
+      "@css/*": ["./web/css/*"]
+    }
+  },
+  "include": ["**/*", "./jest-setup.ts"],
+  "exclude": ["dist/**/*", "node_modules"]
+}
