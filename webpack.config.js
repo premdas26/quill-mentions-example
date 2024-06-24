@@ -1,6 +1,5 @@
 /* eslint @typescript-eslint/no-var-requires: "off" */
 const path = require('path')
-const CopyPlugin = require('copy-webpack-plugin')
 const webpack = require('webpack')
 const devMode = process.env.NODE_ENV !== 'production'
 const profile = process.env.NODE_PROFILE === 'profile'
@@ -65,8 +64,6 @@ module.exports = {
     },
     devtool: 'source-map',
     plugins: [
-        new CopyPlugin({ patterns: [{ from: './src/favicon.ico', to: 'favicon.ico' }] }),
-        new CopyPlugin({ patterns: [{ from: './web/images/favicons/*', to: '.' }] }),
         new webpack.ProvidePlugin({ process: 'process/browser.js' }),
     ],
     output: {
